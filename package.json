@@ -4,7 +4,7 @@
 	"description": "Ratio3D Online 3D Viewer - free browser-based 3D model and CAD file viewer",
 	"license": "MIT",
 	"type": "module",
-	"main": "./build/engine/o3dv.module.js",
+	"main": "./source/engine/main.js",
 	"repository": "github:ratiocad/web-cad-viewer",
 	"keywords": [
 		"3d",
