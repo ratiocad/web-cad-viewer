@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" type="image/png" href="assets/images/3dviewer_ratio3d_favicon.ico">
+    <link rel="canonical" href="https://3dviewer.ratio3d.com/">
+
+    <title>Free Online 3D Viewer | Browser Based 3D Model & CAD File Viewer | Ratio3D</title>
+    <meta name="description" content="Use our free online 3D viewer to open STEP, STL, 3MF, IGES, OBJ, GLTF and other CAD & 3D models directly in browser. No software install, all rendering runs locally to protect your design files.">
+    <meta name="keywords" content="online 3D viewer, free 3D viewer, stl viewer, step viewer, iges viewer, 3mf viewer, obj viewer, gltf viewer, online CAD viewer, browser 3D model viewer, 3dm viewer">
+    <meta name="author" content="Ratio3D">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ratio3D">
+    <meta property="og:title" content="Free Online 3D Viewer | Browser Based 3D Model & CAD File Viewer">
+    <meta property="og:description" content="Free browser-based 3D viewer supporting STEP, STL, 3MF, IGES, OBJ and more formats. View CAD models without installation, local rendering protects your private designs.">
+    <meta property="og:url" content="https://3dviewer.ratio3d.com/">
+    <meta property="og:image" content="https://3dviewer.ratio3d.com/assets/images/3dviewer_ratio3d_logo.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online 3D Viewer | Browser Based 3D Model & CAD File Viewer">
+    <meta name="twitter:description" content="Free browser-based 3D viewer supporting STEP, STL, 3MF, IGES, OBJ and more formats. View CAD models without installation, local rendering protects your private designs.">
+    <meta name="twitter:image" content="https://3dviewer.ratio3d.com/assets/images/3dviewer_ratio3d_logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Ratio3D Online 3D Viewer",
+      "url": "https://3dviewer.ratio3d.com/",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free online 3D and CAD file viewer supporting 3dm, 3ds, 3mf, amf, bim, brep, dae, fbx, fcstd, gltf, ifc, iges, step, stl, obj, off, ply, wrl. View 3D models directly in your web browser with local rendering.",
+      "featureList": "Online CAD viewing, 3D model preview, interactive orbit control, model export, image screenshot, embedded viewer, local browser processing, no file upload to server"
+    }
+    </script>
+
+    <!-- meta start -->
+    <!-- meta end -->
+
+    <!-- website start -->
+    <link rel="stylesheet" type="text/css" href="build/website/o3dv.website.min.css">
+    <script type="text/javascript" src="build/website/o3dv.website.min.js"></script>
+    <!-- website end -->
+
+    <!-- website footer style start -->
+    <style>
+        .website_footer
+        {
+            margin-top: 45px;
+            padding-top: 28px;
+            border-top: 1px solid var(--ov_border_color);
+            text-align: center;
+        }
+
+        .website_footer .website_footer_title
+        {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--ov_foreground_color);
+            margin-bottom: 14px;
+        }
+
+        .website_footer .website_footer_tools
+        {
+            margin-bottom: 20px;
+        }
+
+        .website_footer .website_footer_tool_link
+        {
+            display: inline-block;
+            color: var(--ov_outline_button_text_color);
+            text-decoration: none;
+            font-size: 15px;
+            border-radius: 5px;
+            padding: 6px 16px;
+            margin: 4px 5px;
+            border: 1px solid var(--ov_outline_button_color);
+            cursor: pointer;
+        }
+
+        .website_footer .website_footer_tool_link:hover
+        {
+            background: var(--ov_outline_button_hover_color);
+        }
+
+        .website_footer .website_footer_description
+        {
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--ov_foreground_color);
+            margin: 0px 0px 10px 0px;
+        }
+
+        .website_footer .website_footer_description a
+        {
+            color: var(--ov_outline_button_text_color);
+            text-decoration: none;
+        }
+
+        .website_footer .website_footer_description a:hover
+        {
+            text-decoration: underline;
+        }
+
+        .website_footer .website_footer_copyright
+        {
+            font-size: 12px;
+            color: var(--ov_light_icon_color);
+        }
+    </style>
+    <!-- website footer style end -->
+    <!-- plugins start -->
+    <!-- plugins end -->
+
+    <!-- website analytics start -->
+    <script type="text/javascript">
+        OV.SetWebsiteEventHandler ((eventName, eventLabel, eventParams) => {
+            console.log ({
+                eventName : eventName,
+                eventLabel : eventLabel,
+                eventParams : eventParams
+            });
+        });
+    </script>
+    <!-- website analytics end -->
+
+    <script type="text/javascript">
+        OV.StartWebsite ();
+    </script>
+
+</head>
+
+<body>
+    <input type="file" id="open_file" style="display:none;" multiple></input>
+    <div class="header" id="header">
+        <div class="title">
+            <div class="title_left">
+                <a href="index.html">
+                    <img class="logo_image" src="assets/images/3dviewer_ratio3d_logo_text.png" height="40" width="auto" alt="Ratio3D Free Online 3D Model & CAD Viewer" style="width: auto;">
+                </a>
+            </div>
+            <div class="title_right" id="header_buttons"></div>
+            <div class="main_file_name only_full_width" id="main_file_name"></div>
+        </div>
+        <div class="toolbar" id="toolbar"></div>
+    </div>
+    <div class="main" id="main">
+        <div class="main_left_container only_full_width" id="main_left_container">
+            <div class="main_navigator ov_panel_set_container" id="main_navigator"></div>
+            <div class="main_splitter" id="main_navigator_splitter"></div>
+        </div>
+        <div class="main_viewer" id="main_viewer"></div>
+        <div class="main_right_container only_full_width" id="main_right_container">
+            <div class="main_splitter" id="main_sidebar_splitter"></div>
+            <div class="main_sidebar ov_panel_set_right_container" id="main_sidebar"></div>
+        </div>
+    </div>
+    <div class="intro ov_thin_scrollbar" id="intro">
+        <div class="intro_content" id="intro_content">
+            <div class="intro_logo">
+                <div class="intro_dragdrop_text" id="intro_dragdrop_text">Drag and drop 3D models here.</div>
+            </div>
+            <p class="intro_formats_title" style="font-size:15px;  margin:8px 0 16px 0; line-height:1.6;">
+                This free online 3D viewer runs all rendering locally inside your web browser. Uploaded STEP, STL, 3MF, IGES and other CAD files stay on your device and will never be uploaded or saved to remote servers, keeping your design data fully private.
+            </p>
+            <div class="intro_formats">
+                <div class="intro_formats_title" id="intro_formats_title"></div>
+                <div class="intro_file_formats">
+                    <a href="#model=assets/models/RhinoLogo.3dm">3dm</a>
+                    <a href="#model=assets/models/cubes.3ds,assets/models/texture.png">3ds</a>
+                    <a href="#model=assets/models/rhombicuboctahedron.3mf">3mf</a>
+                    <a href="#model=assets/models/rook.amf">amf</a>
+                    <a href="#model=assets/models/MultipleMeshes.bim">bim</a>
+                    <a href="#model=assets/models/as1_pe_203.brep">brep</a>
+                    <a href="#model=assets/models/X_Bot.dae">dae</a>
+                    <a href="#model=assets/models/Y_Bot.fbx">fbx</a>
+                    <a href="#model=assets/models/ArchDetail.FCStd">fcstd</a>
+                    <a href="#model=assets/models/DamagedHelmet.glb">gltf</a>
+                    <a href="#model=assets/models/haus.ifc">ifc</a>
+                    <a href="#model=assets/models/as1_pe_203.igs">iges</a>
+                    <a href="#model=assets/models/as1_pe_203.stp">step</a>
+                    <a href="#model=assets/models/utah_teapot.stl">stl</a>
+                    <a href="#model=assets/models/solids.obj,assets/models/solids.mtl">obj</a>
+                    <a href="#model=assets/models/cube.off">off</a>
+                    <a href="#model=assets/models/cow.ply">ply</a>
+                    <a href="#model=assets/models/extrusion3.wrl">wrl</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

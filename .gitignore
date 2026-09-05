@@ -1,0 +1,9 @@
+build/*
+plugins/*
+node_modules
+__pycache__
+website - 副本
+备注.txt
+*.map
+.vscode
+website/build/website_dev

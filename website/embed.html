@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="icon" type="image/png" href="assets/images/3dviewer_ratio3d_favicon.ico">
+	<link rel="canonical" href="https://3dviewer.ratio3d.com/embed.html">
+	<meta name="robots" content="noindex">
+
+	<title>3D Viewer Embed - Ratio3D</title>
+	<meta name="description" content="Embed our free online 3D viewer into your website. Supports 18+ file formats including STL, OBJ, glTF, STEP, IGES, and more.">
+	<meta name="keywords" content="3D viewer embed, embed 3D viewer, website 3D viewer, 3D model embed, ratio3d">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="3D Viewer Embed - Ratio3D">
+	<meta property="og:description" content="Embed our free online 3D viewer into your website.">
+	<meta property="og:url" content="https://3dviewer.ratio3d.com/embed.html">
+
+	<!-- meta start -->
+	<!-- meta end -->
+
+	<!-- website start -->
+	<link rel="stylesheet" type="text/css" href="build/website_dev/o3dv.website.min.css">
+	<script type="text/javascript" src="build/website_dev/o3dv.website.min.js"></script>
+	<!-- website end -->
+
+	<!-- embed analytics start -->
+    <script type="text/javascript">
+        OV.SetWebsiteEventHandler ((eventName, eventLabel, eventParams) => {
+            console.log ({
+                eventName : eventName,
+                eventLabel : eventLabel,
+                eventParams : eventParams
+            });
+        });
+    </script>
+	<!-- embed analytics end -->
+
+    <script type="text/javascript">
+        OV.StartEmbed ();
+    </script>
+
+	<style>
+		html, body
+		{
+			background: transparent;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="embed_viewer" id="embed_viewer">
+		<a id="website_link" href="https://3dviewer.ratio3d.com" target="_blank" title="Open in 3D Viewer">
+			<img class="embed_logo" src="assets/images/3dviewer_ratio3d_logo.png"/>
+		</a>
+	</div>
+</body>
+
+</html>
